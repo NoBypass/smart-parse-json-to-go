@@ -19,7 +19,7 @@ def new_struct(go_struct: dict):
     out = "struct {\n"
     for key, value in go_struct.items():
         out += title(key) + " " + get_type(value) + " `json:\"" + key + "\"`\n"
-    return out + "}\n"
+    return out + "}"
 
 def new_slice(go_slice: list):
     if len(go_slice) == 0:
